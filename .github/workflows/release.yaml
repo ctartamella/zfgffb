@@ -24,4 +24,4 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: zfgffb_${{GITHUB_REF_NAME}}.zip
+          files: zfgffb_${{ github.ref_name }}.zip
