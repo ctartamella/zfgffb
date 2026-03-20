@@ -17,11 +17,11 @@ jobs:
 
       - name: Create zip
         run: |
-          zip -r release.zip . \
+          zip -r zfgffb_${GITHUB_REF_NAME}.zip . \
             --exclude ".git/*" \
             --exclude ".github/*"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: release.zip
+          files: zfgffb_${GITHUB_REF_NAME}.zip
